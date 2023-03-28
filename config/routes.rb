@@ -3,5 +3,7 @@ Rails.application.routes.draw do
 
   # Restaurants route
   resources :ristorantes 
+  post "/reviews", to:"reviews#create"
+  get "/reviews", to:"reviews#index"
 
 end
