@@ -48,4 +48,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_28_065726) do
 
   add_foreign_key "reviews", "restaurants"
   add_foreign_key "reviews", "users"
+ActiveRecord::Schema[7.0].define(version: 2023_03_27_182854) do
+  create_table "locations", force: :cascade do |t|
+    t.string "county"
+    t.string "street"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
 end
