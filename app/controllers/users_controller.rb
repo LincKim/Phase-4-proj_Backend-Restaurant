@@ -11,13 +11,16 @@ class UsersController < ApplicationController
     
     
 
-     # GET /users/{id}
-    def show
-        #check if user is present
-        user = find_user
-        #return user
-        render json: user
-    end
+     # keep user login
+     def show
+        user = User.find_by(id: session[:user_id])
+        if user
+          render json: user
+        else
+          render json: { error: "Not authorized" }, status: :unauthorized
+        end
+      end
+
 
     #putch
     def update
@@ -31,7 +34,7 @@ class UsersController < ApplicationController
     end
 
   
-
+    #post user
     def create
         user = User.create!(user_params)
         if user.valid?
@@ -40,6 +43,8 @@ class UsersController < ApplicationController
             render json: { errors: user.errors.full_messages }, status: :unprocessable_entity
         end
     end
+
+
 
    # DELETE
    def destroy
