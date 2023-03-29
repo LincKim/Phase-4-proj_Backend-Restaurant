@@ -2,17 +2,17 @@ class RistorantesController < ApplicationController
     
     
     def index 
-        restaurants = Restaurant.all 
+        restaurants = Ristorante.all 
         render json: restaurants
     end
 
     def show 
-        restaurant = Restaurant.find_by(id: params[:id])
+        restaurant = Ristorante.find_by(id: params[:id])
         render json: restaurant
     end
 
     def update 
-        restaurant = Restaurant.find_by(id: params[:id])
+        restaurant = Ristorante.find_by(id: params[:id])
         if restaurant
             restaurant.update(restaurant_params)
             render json: restaurant
@@ -22,7 +22,7 @@ class RistorantesController < ApplicationController
     end
 
     def create 
-        restaurant = Restaurant.create(restaurant_params)
+        restaurant = Ristorante.create(restaurant_params)
         if restaurant.valid?
             render json: restaurant, status: :created
         else
@@ -32,7 +32,7 @@ class RistorantesController < ApplicationController
     end
 
     def destroy
-        restaurant = Restaurant.find_by(id: params[:id])
+        restaurant = Ristorante.find_by(id: params[:id])
         if restaurant
             restaurant.destroy
             head :no_content
@@ -44,11 +44,11 @@ class RistorantesController < ApplicationController
     private 
 
     def restaurant_params 
-        params.permit(:name, :email)
+        params.permit(:name, :email, :location_id)
     end
 
     def restaurant_not_found 
         render json: { message: "Restaurant not found" }, status: :not_found 
     end
 end
-end
+
