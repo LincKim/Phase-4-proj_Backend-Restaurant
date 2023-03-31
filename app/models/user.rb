@@ -1,6 +1,6 @@
 class User < ApplicationRecord
      
-    has_many :restaurants, through: :reviews
+    has_many :ristorantes, through: :reviews
 
     has_secure_password  # hashing of a password 123456 => skdjfksdvj@jnfkdjnsjdf
 

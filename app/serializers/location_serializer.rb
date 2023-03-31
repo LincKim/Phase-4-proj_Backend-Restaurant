@@ -1,5 +1,5 @@
 class LocationSerializer < ActiveModel::Serializer
   attributes :id, :county, :street
 
-  has_many :restaurants
+  has_many :ristorantes
 end
