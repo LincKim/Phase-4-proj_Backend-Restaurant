@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   delete "/logout", to: "sessions#destroy"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  resources :locations, only: [:index]
+  resources :locations, only: [:index, :show]
   # Restaurants route
   resources :ristorantes 
   post "/reviews", to:"reviews#create"
