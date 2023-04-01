@@ -6382,3 +6382,746 @@ Can't verify CSRF token authenticity.
 Completed 422 Unprocessable Entity in 211ms (Views: 39.7ms | ActiveRecord: 0.5ms | Allocations: 8646)
 
 
+Started GET "/ws" for ::1 at 2023-03-31 14:56:04 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started POST "/ristorantes" for 127.0.0.1 at 2023-03-31 15:20:33 +0300
+  
+SyntaxError (/home/lincoln/Desktop/Phase4_Project/Phase-4-proj_Backend-Restaurant/app/models/ristorante.rb:6: syntax error, unexpected ':', expecting ']'
+... enum :location_id, [ :SELECT :NAIROBI, :NAKURU, :MOMBASA ]
+...                              ^
+):
+  
+app/models/ristorante.rb:6: syntax error, unexpected ':', expecting ']'
+app/models/ristorante.rb:6: syntax error, unexpected ':', expecting ']'
+app/models/ristorante.rb:6: syntax error, unexpected ':', expecting ']'
+Started POST "/ristorantes" for 127.0.0.1 at 2023-03-31 15:21:05 +0300
+Processing by RistorantesController#create as */*
+  Parameters: {"name"=>"Chicken", "email"=>"chicken@gmail.com", "location_id"=>"Nairobi", "ristorante"=>{"name"=>"Chicken", "email"=>"chicken@gmail.com", "location_id"=>"Nairobi"}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :ristorante. Context: { controller: RistorantesController, action: create, request: #<ActionDispatch::Request:0x00007fd5c8640c80>, params: {"name"=>"Chicken", "email"=>"chicken@gmail.com", "location_id"=>"Nairobi", "controller"=>"ristorantes", "action"=>"create", "ristorante"=>{"name"=>"Chicken", "email"=>"chicken@gmail.com", "location_id"=>"Nairobi"}} }[0m
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.6ms | Allocations: 2025)
+
+
+  
+ArgumentError ('Nairobi' is not a valid location_id):
+  
+app/controllers/ristorantes_controller.rb:25:in `create'
+Started POST "/ristorantes" for 127.0.0.1 at 2023-03-31 15:21:34 +0300
+Processing by RistorantesController#create as */*
+  Parameters: {"name"=>"Chicken", "email"=>"chicken@gmail.com", "location_id"=>"NAIROBI", "ristorante"=>{"name"=>"Chicken", "email"=>"chicken@gmail.com", "location_id"=>"NAIROBI"}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :ristorante. Context: { controller: RistorantesController, action: create, request: #<ActionDispatch::Request:0x00007fd5c86fb198>, params: {"name"=>"Chicken", "email"=>"chicken@gmail.com", "location_id"=>"NAIROBI", "controller"=>"ristorantes", "action"=>"create", "ristorante"=>{"name"=>"Chicken", "email"=>"chicken@gmail.com", "location_id"=>"NAIROBI"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 422 Unprocessable Entity in 23ms (Views: 2.0ms | ActiveRecord: 0.5ms | Allocations: 7977)
+
+
+Started POST "/ristorantes" for 127.0.0.1 at 2023-03-31 15:26:20 +0300
+Processing by RistorantesController#create as */*
+  Parameters: {"name"=>"Chicken", "email"=>"chicken@gmail.com", "location_id"=>"NAIROBI", "ristorante"=>{"name"=>"Chicken", "email"=>"chicken@gmail.com", "location_id"=>"NAIROBI"}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :ristorante. Context: { controller: RistorantesController, action: create, request: #<ActionDispatch::Request:0x00007fd5c87f0aa8>, params: {"name"=>"Chicken", "email"=>"chicken@gmail.com", "location_id"=>"NAIROBI", "controller"=>"ristorantes", "action"=>"create", "ristorante"=>{"name"=>"Chicken", "email"=>"chicken@gmail.com", "location_id"=>"NAIROBI"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 422 Unprocessable Entity in 10ms (Views: 1.0ms | ActiveRecord: 0.5ms | Allocations: 3401)
+
+
+Started POST "/ristorantes" for 127.0.0.1 at 2023-03-31 15:30:36 +0300
+Processing by RistorantesController#create as */*
+  Parameters: {"name"=>"Chicken", "email"=>"chicken@gmail.com", "location_id"=>"NAKURU", "ristorante"=>{"name"=>"Chicken", "email"=>"chicken@gmail.com", "location_id"=>"NAKURU"}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :ristorante. Context: { controller: RistorantesController, action: create, request: #<ActionDispatch::Request:0x00007fd5c89ffb50>, params: {"name"=>"Chicken", "email"=>"chicken@gmail.com", "location_id"=>"NAKURU", "controller"=>"ristorantes", "action"=>"create", "ristorante"=>{"name"=>"Chicken", "email"=>"chicken@gmail.com", "location_id"=>"NAKURU"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+  [1m[36mLocation Load (0.9ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Completed 422 Unprocessable Entity in 15ms (Views: 0.9ms | ActiveRecord: 1.1ms | Allocations: 3411)
+
+
+Started POST "/ristorantes" for 127.0.0.1 at 2023-03-31 16:17:33 +0300
+Processing by RistorantesController#create as */*
+  Parameters: {"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>"3", "ristorante"=>{"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>"3"}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :ristorante. Context: { controller: RistorantesController, action: create, request: #<ActionDispatch::Request:0x00007fd5c85a19a0>, params: {"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>"3", "controller"=>"ristorantes", "action"=>"create", "ristorante"=>{"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>"3"}} }[0m
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.3ms | Allocations: 2013)
+
+
+  
+ArgumentError ('3' is not a valid location_id):
+  
+app/controllers/ristorantes_controller.rb:25:in `create'
+Started POST "/ristorantes" for 127.0.0.1 at 2023-03-31 16:17:57 +0300
+Processing by RistorantesController#create as */*
+  Parameters: {"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>3, "ristorante"=>{"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>3}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :ristorante. Context: { controller: RistorantesController, action: create, request: #<ActionDispatch::Request:0x00007fd5c86bdf28>, params: {"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>3, "controller"=>"ristorantes", "action"=>"create", "ristorante"=>{"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>3}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 422 Unprocessable Entity in 20ms (Views: 2.5ms | ActiveRecord: 0.4ms | Allocations: 7939)
+
+
+Started POST "/ristorantes" for 127.0.0.1 at 2023-03-31 16:18:05 +0300
+Processing by RistorantesController#create as */*
+  Parameters: {"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>48, "ristorante"=>{"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>48}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :ristorante. Context: { controller: RistorantesController, action: create, request: #<ActionDispatch::Request:0x00007fd5c87dafa0>, params: {"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>48, "controller"=>"ristorantes", "action"=>"create", "ristorante"=>{"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>48}} }[0m
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 701)
+
+
+  
+ArgumentError ('48' is not a valid location_id):
+  
+app/controllers/ristorantes_controller.rb:25:in `create'
+Started POST "/ristorantes" for 127.0.0.1 at 2023-03-31 16:18:23 +0300
+Processing by RistorantesController#create as */*
+  Parameters: {"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>"2", "ristorante"=>{"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>"2"}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :ristorante. Context: { controller: RistorantesController, action: create, request: #<ActionDispatch::Request:0x00007fd5cb563030>, params: {"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>"2", "controller"=>"ristorantes", "action"=>"create", "ristorante"=>{"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>"2"}} }[0m
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 698)
+
+
+  
+ArgumentError ('2' is not a valid location_id):
+  
+app/controllers/ristorantes_controller.rb:25:in `create'
+Started POST "/ristorantes" for 127.0.0.1 at 2023-03-31 16:18:42 +0300
+Processing by RistorantesController#create as */*
+  Parameters: {"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>2, "ristorante"=>{"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>2}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :ristorante. Context: { controller: RistorantesController, action: create, request: #<ActionDispatch::Request:0x00007fd5c868d0d0>, params: {"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>2, "controller"=>"ristorantes", "action"=>"create", "ristorante"=>{"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>2}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+  [1m[36mLocation Load (0.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 422 Unprocessable Entity in 10ms (Views: 1.2ms | ActiveRecord: 0.3ms | Allocations: 3399)
+
+
+Started GET "/locations" for 127.0.0.1 at 2023-03-31 16:19:01 +0300
+Processing by LocationsController#index as */*
+  Parameters: {"name"=>"Chicken", "email"=>"chicken@gmail.com", "location_id"=>50, "location"=>{}}
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRistorante Load (0.3ms)[0m  [1m[34mSELECT "ristorantes".* FROM "ristorantes" WHERE "ristorantes"."location_id" = ?[0m  [["location_id", 1]]
+[active_model_serializers]   ↳ app/controllers/locations_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRistorante Load (0.2ms)[0m  [1m[34mSELECT "ristorantes".* FROM "ristorantes" WHERE "ristorantes"."location_id" = ?[0m  [["location_id", 2]]
+[active_model_serializers]   ↳ app/controllers/locations_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRistorante Load (0.2ms)[0m  [1m[34mSELECT "ristorantes".* FROM "ristorantes" WHERE "ristorantes"."location_id" = ?[0m  [["location_id", 3]]
+[active_model_serializers]   ↳ app/controllers/locations_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRistorante Load (0.2ms)[0m  [1m[34mSELECT "ristorantes".* FROM "ristorantes" WHERE "ristorantes"."location_id" = ?[0m  [["location_id", 4]]
+[active_model_serializers]   ↳ app/controllers/locations_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRistorante Load (0.2ms)[0m  [1m[34mSELECT "ristorantes".* FROM "ristorantes" WHERE "ristorantes"."location_id" = ?[0m  [["location_id", 5]]
+[active_model_serializers]   ↳ app/controllers/locations_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRistorante Load (0.2ms)[0m  [1m[34mSELECT "ristorantes".* FROM "ristorantes" WHERE "ristorantes"."location_id" = ?[0m  [["location_id", 6]]
+[active_model_serializers]   ↳ app/controllers/locations_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRistorante Load (0.1ms)[0m  [1m[34mSELECT "ristorantes".* FROM "ristorantes" WHERE "ristorantes"."location_id" = ?[0m  [["location_id", 7]]
+[active_model_serializers]   ↳ app/controllers/locations_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRistorante Load (0.2ms)[0m  [1m[34mSELECT "ristorantes".* FROM "ristorantes" WHERE "ristorantes"."location_id" = ?[0m  [["location_id", 8]]
+[active_model_serializers]   ↳ app/controllers/locations_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRistorante Load (0.5ms)[0m  [1m[34mSELECT "ristorantes".* FROM "ristorantes" WHERE "ristorantes"."location_id" = ?[0m  [["location_id", 9]]
+[active_model_serializers]   ↳ app/controllers/locations_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (36.13ms)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 2.4ms | Allocations: 17211)
+
+
+  
+ArgumentError ('9' is not a valid location_id):
+  
+app/controllers/locations_controller.rb:5:in `index'
+Started GET "/locations" for 127.0.0.1 at 2023-03-31 16:20:19 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LocationsController#index as */*
+  Parameters: {"name"=>"Chicken", "email"=>"chicken@gmail.com", "location_id"=>50, "location"=>{}}
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRistorante Load (0.3ms)[0m  [1m[34mSELECT "ristorantes".* FROM "ristorantes" WHERE "ristorantes"."location_id" = ?[0m  [["location_id", 1]]
+[active_model_serializers]   ↳ app/controllers/locations_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRistorante Load (0.2ms)[0m  [1m[34mSELECT "ristorantes".* FROM "ristorantes" WHERE "ristorantes"."location_id" = ?[0m  [["location_id", 2]]
+[active_model_serializers]   ↳ app/controllers/locations_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRistorante Load (0.2ms)[0m  [1m[34mSELECT "ristorantes".* FROM "ristorantes" WHERE "ristorantes"."location_id" = ?[0m  [["location_id", 3]]
+[active_model_serializers]   ↳ app/controllers/locations_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRistorante Load (0.2ms)[0m  [1m[34mSELECT "ristorantes".* FROM "ristorantes" WHERE "ristorantes"."location_id" = ?[0m  [["location_id", 4]]
+[active_model_serializers]   ↳ app/controllers/locations_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRistorante Load (0.2ms)[0m  [1m[34mSELECT "ristorantes".* FROM "ristorantes" WHERE "ristorantes"."location_id" = ?[0m  [["location_id", 5]]
+[active_model_serializers]   ↳ app/controllers/locations_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRistorante Load (0.1ms)[0m  [1m[34mSELECT "ristorantes".* FROM "ristorantes" WHERE "ristorantes"."location_id" = ?[0m  [["location_id", 6]]
+[active_model_serializers]   ↳ app/controllers/locations_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRistorante Load (0.1ms)[0m  [1m[34mSELECT "ristorantes".* FROM "ristorantes" WHERE "ristorantes"."location_id" = ?[0m  [["location_id", 7]]
+[active_model_serializers]   ↳ app/controllers/locations_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRistorante Load (0.1ms)[0m  [1m[34mSELECT "ristorantes".* FROM "ristorantes" WHERE "ristorantes"."location_id" = ?[0m  [["location_id", 8]]
+[active_model_serializers]   ↳ app/controllers/locations_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRistorante Load (0.1ms)[0m  [1m[34mSELECT "ristorantes".* FROM "ristorantes" WHERE "ristorantes"."location_id" = ?[0m  [["location_id", 9]]
+[active_model_serializers]   ↳ app/controllers/locations_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (61.74ms)
+Completed 500 Internal Server Error in 91ms (ActiveRecord: 4.8ms | Allocations: 30312)
+
+
+  
+ArgumentError ('9' is not a valid location_id):
+  
+app/controllers/locations_controller.rb:5:in `index'
+Started GET "/locations" for 127.0.0.1 at 2023-03-31 16:24:17 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LocationsController#index as */*
+  Parameters: {"name"=>"Chicken", "email"=>"chicken@gmail.com", "location_id"=>50, "location"=>{}}
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRistorante Load (0.3ms)[0m  [1m[34mSELECT "ristorantes".* FROM "ristorantes" WHERE "ristorantes"."location_id" = ?[0m  [["location_id", 1]]
+[active_model_serializers]   ↳ app/controllers/locations_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRistorante Load (0.2ms)[0m  [1m[34mSELECT "ristorantes".* FROM "ristorantes" WHERE "ristorantes"."location_id" = ?[0m  [["location_id", 2]]
+[active_model_serializers]   ↳ app/controllers/locations_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRistorante Load (0.1ms)[0m  [1m[34mSELECT "ristorantes".* FROM "ristorantes" WHERE "ristorantes"."location_id" = ?[0m  [["location_id", 3]]
+[active_model_serializers]   ↳ app/controllers/locations_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRistorante Load (0.2ms)[0m  [1m[34mSELECT "ristorantes".* FROM "ristorantes" WHERE "ristorantes"."location_id" = ?[0m  [["location_id", 4]]
+[active_model_serializers]   ↳ app/controllers/locations_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRistorante Load (0.2ms)[0m  [1m[34mSELECT "ristorantes".* FROM "ristorantes" WHERE "ristorantes"."location_id" = ?[0m  [["location_id", 5]]
+[active_model_serializers]   ↳ app/controllers/locations_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRistorante Load (0.2ms)[0m  [1m[34mSELECT "ristorantes".* FROM "ristorantes" WHERE "ristorantes"."location_id" = ?[0m  [["location_id", 6]]
+[active_model_serializers]   ↳ app/controllers/locations_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRistorante Load (0.2ms)[0m  [1m[34mSELECT "ristorantes".* FROM "ristorantes" WHERE "ristorantes"."location_id" = ?[0m  [["location_id", 7]]
+[active_model_serializers]   ↳ app/controllers/locations_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRistorante Load (0.2ms)[0m  [1m[34mSELECT "ristorantes".* FROM "ristorantes" WHERE "ristorantes"."location_id" = ?[0m  [["location_id", 8]]
+[active_model_serializers]   ↳ app/controllers/locations_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRistorante Load (0.2ms)[0m  [1m[34mSELECT "ristorantes".* FROM "ristorantes" WHERE "ristorantes"."location_id" = ?[0m  [["location_id", 9]]
+[active_model_serializers]   ↳ app/controllers/locations_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (65.66ms)
+Completed 500 Internal Server Error in 93ms (ActiveRecord: 3.9ms | Allocations: 30313)
+
+
+  
+ArgumentError ('9' is not a valid location_id):
+  
+app/controllers/locations_controller.rb:5:in `index'
+Started GET "/ristorantes" for 127.0.0.1 at 2023-03-31 16:27:26 +0300
+Processing by RistorantesController#index as */*
+  Parameters: {"name"=>"Chicken", "email"=>"chicken@gmail.com", "location_id"=>50, "ristorante"=>{"name"=>"Chicken", "email"=>"chicken@gmail.com", "location_id"=>50}}
+  [1m[36mRistorante Load (0.3ms)[0m  [1m[34mSELECT "ristorantes".* FROM "ristorantes"[0m
+  ↳ app/controllers/ristorantes_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."ristorante_id" = ?[0m  [["ristorante_id", 1]]
+[active_model_serializers]   ↳ app/controllers/ristorantes_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/ristorantes_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."ristorante_id" = ?[0m  [["ristorante_id", 2]]
+[active_model_serializers]   ↳ app/controllers/ristorantes_controller.rb:6:in `index'
+[active_model_serializers] No serializer found for resource: #<Review id: 1, comment: "to good!", rating: 1, user_id: 5, ristorante_id: 2, created_at: "2023-03-29 07:16:57.830849000 +0000", updated_at: "2023-03-29 07:16:57.830849000 +0000">
+[active_model_serializers]   [1m[36mCACHE Location Load (0.0ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/ristorantes_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."ristorante_id" = ?[0m  [["ristorante_id", 3]]
+[active_model_serializers]   ↳ app/controllers/ristorantes_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."ristorante_id" = ?[0m  [["ristorante_id", 4]]
+[active_model_serializers]   ↳ app/controllers/ristorantes_controller.rb:6:in `index'
+[active_model_serializers] No serializer found for resource: #<Review id: 1, comment: "to good!", rating: 1, user_id: 5, ristorante_id: 2, created_at: "2023-03-29 07:16:57.830849000 +0000", updated_at: "2023-03-29 07:16:57.830849000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (46.48ms)
+Completed 200 OK in 50ms (Views: 47.3ms | ActiveRecord: 2.3ms | Allocations: 25498)
+
+
+Started POST "/ristorantes" for 127.0.0.1 at 2023-03-31 16:30:12 +0300
+Processing by RistorantesController#create as */*
+  Parameters: {"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>50, "ristorante"=>{"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>50}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :ristorante. Context: { controller: RistorantesController, action: create, request: #<ActionDispatch::Request:0x00007f78f9daff10>, params: {"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>50, "controller"=>"ristorantes", "action"=>"create", "ristorante"=>{"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>50}} }[0m
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 870)
+
+
+  
+ArgumentError ('50' is not a valid location_id):
+  
+app/controllers/ristorantes_controller.rb:25:in `create'
+Started GET "/ristorantes" for 127.0.0.1 at 2023-03-31 16:30:22 +0300
+Processing by RistorantesController#index as */*
+  Parameters: {"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>50, "ristorante"=>{"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>50}}
+  [1m[36mRistorante Load (0.1ms)[0m  [1m[34mSELECT "ristorantes".* FROM "ristorantes"[0m
+  ↳ app/controllers/ristorantes_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."ristorante_id" = ?[0m  [["ristorante_id", 1]]
+[active_model_serializers]   ↳ app/controllers/ristorantes_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/ristorantes_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."ristorante_id" = ?[0m  [["ristorante_id", 2]]
+[active_model_serializers]   ↳ app/controllers/ristorantes_controller.rb:6:in `index'
+[active_model_serializers] No serializer found for resource: #<Review id: 1, comment: "to good!", rating: 1, user_id: 5, ristorante_id: 2, created_at: "2023-03-29 07:16:57.830849000 +0000", updated_at: "2023-03-29 07:16:57.830849000 +0000">
+[active_model_serializers]   [1m[36mCACHE Location Load (0.0ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/ristorantes_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."ristorante_id" = ?[0m  [["ristorante_id", 3]]
+[active_model_serializers]   ↳ app/controllers/ristorantes_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."ristorante_id" = ?[0m  [["ristorante_id", 4]]
+[active_model_serializers]   ↳ app/controllers/ristorantes_controller.rb:6:in `index'
+[active_model_serializers] No serializer found for resource: #<Review id: 1, comment: "to good!", rating: 1, user_id: 5, ristorante_id: 2, created_at: "2023-03-29 07:16:57.830849000 +0000", updated_at: "2023-03-29 07:16:57.830849000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (25.6ms)
+Completed 200 OK in 29ms (Views: 27.4ms | ActiveRecord: 0.8ms | Allocations: 8379)
+
+
+  [1m[35m (115.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (108.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateLocations (20230327182854)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "locations" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "county" varchar, "street" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230327182854"]]
+  [1m[36mTRANSACTION (104.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateUsers (20230327232930)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "password_digest" varchar, "email" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230327232930"]]
+  [1m[36mTRANSACTION (116.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateReviews (20230328065726)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "comment" varchar, "rating" integer, "user_id" integer NOT NULL, "ristorante_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_74a66bd6c5"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_2304d245f4"
+FOREIGN KEY ("ristorante_id")
+  REFERENCES "ristorantes" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_reviews_on_user_id" ON "reviews" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_reviews_on_ristorante_id" ON "reviews" ("ristorante_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230328065726"]]
+  [1m[36mTRANSACTION (93.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateRistorantes (20230328085315)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "ristorantes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "location_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_56b3151598"
+FOREIGN KEY ("location_id")
+  REFERENCES "locations" ("id")
+)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "index_ristorantes_on_location_id" ON "ristorantes" ("location_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230328085315"]]
+  [1m[36mTRANSACTION (99.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-03-31 13:31:17.969561"], ["updated_at", "2023-03-31 13:31:17.969561"]]
+  [1m[36mTRANSACTION (50.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLocation Create (0.3ms)[0m  [1m[32mINSERT INTO "locations" ("county", "street", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["county", "Nairobi"], ["street", "Moi Avenue"], ["created_at", "2023-03-31 13:31:18.079047"], ["updated_at", "2023-03-31 13:31:18.079047"]]
+  [1m[36mTRANSACTION (75.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("county", "street", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["county", "Nairobi"], ["street", "Ngong Road"], ["created_at", "2023-03-31 13:31:18.159439"], ["updated_at", "2023-03-31 13:31:18.159439"]]
+  [1m[36mTRANSACTION (62.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLocation Create (0.3ms)[0m  [1m[32mINSERT INTO "locations" ("county", "street", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["county", "Nairobi"], ["street", "Tom Mboya"], ["created_at", "2023-03-31 13:31:18.226257"], ["updated_at", "2023-03-31 13:31:18.226257"]]
+  [1m[36mTRANSACTION (62.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLocation Create (0.3ms)[0m  [1m[32mINSERT INTO "locations" ("county", "street", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["county", "Mombasa"], ["street", "Digo Road"], ["created_at", "2023-03-31 13:31:18.292461"], ["updated_at", "2023-03-31 13:31:18.292461"]]
+  [1m[36mTRANSACTION (62.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLocation Create (0.3ms)[0m  [1m[32mINSERT INTO "locations" ("county", "street", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["county", "Mombasa"], ["street", "Moi Avenue"], ["created_at", "2023-03-31 13:31:18.359232"], ["updated_at", "2023-03-31 13:31:18.359232"]]
+  [1m[36mTRANSACTION (62.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLocation Create (0.3ms)[0m  [1m[32mINSERT INTO "locations" ("county", "street", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["county", "Mombasa"], ["street", "Beach Front"], ["created_at", "2023-03-31 13:31:18.425893"], ["updated_at", "2023-03-31 13:31:18.425893"]]
+  [1m[36mTRANSACTION (95.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mRistorante Load (0.2ms)[0m  [1m[34mSELECT "ristorantes".* FROM "ristorantes" WHERE "ristorantes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mRistorante Load (0.1ms)[0m  [1m[34mSELECT "ristorantes".* FROM "ristorantes" WHERE "ristorantes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+Started POST "/ristorantes" for 127.0.0.1 at 2023-03-31 16:31:54 +0300
+Processing by RistorantesController#create as */*
+  Parameters: {"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>1, "ristorante"=>{"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>1}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :ristorante. Context: { controller: RistorantesController, action: create, request: #<ActionDispatch::Request:0x00007f78db24bea8>, params: {"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>1, "controller"=>"ristorantes", "action"=>"create", "ristorante"=>{"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>1}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+  [1m[36mLocation Load (0.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 422 Unprocessable Entity in 23ms (Views: 2.9ms | ActiveRecord: 2.4ms | Allocations: 11013)
+
+
+Started GET "/locations" for 127.0.0.1 at 2023-03-31 16:35:07 +0300
+Processing by LocationsController#index as */*
+  Parameters: {"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>1, "location"=>{}}
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRistorante Load (0.2ms)[0m  [1m[34mSELECT "ristorantes".* FROM "ristorantes" WHERE "ristorantes"."location_id" = ?[0m  [["location_id", 1]]
+[active_model_serializers]   ↳ app/controllers/locations_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRistorante Load (0.2ms)[0m  [1m[34mSELECT "ristorantes".* FROM "ristorantes" WHERE "ristorantes"."location_id" = ?[0m  [["location_id", 2]]
+[active_model_serializers]   ↳ app/controllers/locations_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRistorante Load (0.2ms)[0m  [1m[34mSELECT "ristorantes".* FROM "ristorantes" WHERE "ristorantes"."location_id" = ?[0m  [["location_id", 3]]
+[active_model_serializers]   ↳ app/controllers/locations_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRistorante Load (0.1ms)[0m  [1m[34mSELECT "ristorantes".* FROM "ristorantes" WHERE "ristorantes"."location_id" = ?[0m  [["location_id", 4]]
+[active_model_serializers]   ↳ app/controllers/locations_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRistorante Load (0.2ms)[0m  [1m[34mSELECT "ristorantes".* FROM "ristorantes" WHERE "ristorantes"."location_id" = ?[0m  [["location_id", 5]]
+[active_model_serializers]   ↳ app/controllers/locations_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mRistorante Load (0.2ms)[0m  [1m[34mSELECT "ristorantes".* FROM "ristorantes" WHERE "ristorantes"."location_id" = ?[0m  [["location_id", 6]]
+[active_model_serializers]   ↳ app/controllers/locations_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (27.96ms)
+Completed 200 OK in 35ms (Views: 33.2ms | ActiveRecord: 1.3ms | Allocations: 11391)
+
+
+Started POST "/ristorantes" for 127.0.0.1 at 2023-03-31 16:35:46 +0300
+Processing by RistorantesController#create as */*
+  Parameters: {"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>1, "ristorante"=>{"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>1}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :ristorante. Context: { controller: RistorantesController, action: create, request: #<ActionDispatch::Request:0x00007f78f9e18538>, params: {"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>1, "controller"=>"ristorantes", "action"=>"create", "ristorante"=>{"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>1}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 422 Unprocessable Entity in 23ms (Views: 1.5ms | ActiveRecord: 0.4ms | Allocations: 3402)
+
+
+Started POST "/ristorantes" for 127.0.0.1 at 2023-03-31 16:36:11 +0300
+Processing by RistorantesController#create as */*
+  Parameters: {"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>2, "ristorante"=>{"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>2}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :ristorante. Context: { controller: RistorantesController, action: create, request: #<ActionDispatch::Request:0x00007f78f9e51ae0>, params: {"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>2, "controller"=>"ristorantes", "action"=>"create", "ristorante"=>{"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>2}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+  [1m[36mLocation Load (0.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 422 Unprocessable Entity in 10ms (Views: 0.9ms | ActiveRecord: 0.4ms | Allocations: 3408)
+
+
+Started POST "/ristorantes" for 127.0.0.1 at 2023-03-31 16:37:27 +0300
+Processing by RistorantesController#create as */*
+  Parameters: {"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>2, "ristorante"=>{"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>2}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :ristorante. Context: { controller: RistorantesController, action: create, request: #<ActionDispatch::Request:0x00007f78dad00b60>, params: {"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>2, "controller"=>"ristorantes", "action"=>"create", "ristorante"=>{"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>2}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.15ms)
+Completed 422 Unprocessable Entity in 21ms (Views: 2.4ms | ActiveRecord: 2.4ms | Allocations: 9734)
+
+
+Started POST "/ristorantes" for 127.0.0.1 at 2023-03-31 16:37:33 +0300
+Processing by RistorantesController#create as */*
+  Parameters: {"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>2, "ristorante"=>{"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>2}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :ristorante. Context: { controller: RistorantesController, action: create, request: #<ActionDispatch::Request:0x00007f78db247088>, params: {"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>2, "controller"=>"ristorantes", "action"=>"create", "ristorante"=>{"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>2}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 422 Unprocessable Entity in 16ms (Views: 1.6ms | ActiveRecord: 0.6ms | Allocations: 3402)
+
+
+Started POST "/ristorantes" for 127.0.0.1 at 2023-03-31 16:38:03 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RistorantesController#create as */*
+  Parameters: {"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>2, "ristorante"=>{"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>2}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :ristorante. Context: { controller: RistorantesController, action: create, request: #<ActionDispatch::Request:0x00007f43d19d03c0>, params: {"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>2, "controller"=>"ristorantes", "action"=>"create", "ristorante"=>{"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>2}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.2ms)
+Completed 422 Unprocessable Entity in 48ms (Views: 3.0ms | ActiveRecord: 2.2ms | Allocations: 16977)
+
+
+Started POST "/ristorantes" for 127.0.0.1 at 2023-03-31 16:38:37 +0300
+Processing by RistorantesController#create as */*
+  Parameters: {"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>2, "ristorante"=>{"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>2}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :ristorante. Context: { controller: RistorantesController, action: create, request: #<ActionDispatch::Request:0x00007f43d25792f8>, params: {"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>2, "controller"=>"ristorantes", "action"=>"create", "ristorante"=>{"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>2}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 422 Unprocessable Entity in 23ms (Views: 2.7ms | ActiveRecord: 2.8ms | Allocations: 9666)
+
+
+Started POST "/ristorantes" for 127.0.0.1 at 2023-03-31 16:39:11 +0300
+Processing by RistorantesController#create as */*
+  Parameters: {"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>2, "ristorante"=>{"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>2}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :ristorante. Context: { controller: RistorantesController, action: create, request: #<ActionDispatch::Request:0x00007f43d1c29108>, params: {"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>2, "controller"=>"ristorantes", "action"=>"create", "ristorante"=>{"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>2}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+  [1m[36mRistorante Create (0.5ms)[0m  [1m[32mINSERT INTO "ristorantes" ("name", "email", "location_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "KFC"], ["email", "chickenKFC@gmail.com"], ["location_id", 2], ["created_at", "2023-03-31 13:39:11.563252"], ["updated_at", "2023-03-31 13:39:11.563252"]]
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+  [1m[36mTRANSACTION (156.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+[active_model_serializers]   [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."ristorante_id" = ?[0m  [["ristorante_id", 1]]
+[active_model_serializers]   ↳ app/controllers/ristorantes_controller.rb:27:in `create'
+[active_model_serializers] Rendered RistoranteSerializer with ActiveModelSerializers::Adapter::Attributes (38.91ms)
+Completed 201 Created in 229ms (Views: 49.4ms | ActiveRecord: 159.5ms | Allocations: 17867)
+
+
+Started OPTIONS "/ristorantes" for 127.0.0.1 at 2023-03-31 16:59:02 +0300
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/ristorantes"):
+  
+Started OPTIONS "/ristorantes" for 127.0.0.1 at 2023-03-31 17:10:13 +0300
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/ristorantes"):
+  
+Started POST "/ristorantes" for 127.0.0.1 at 2023-03-31 17:17:36 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RistorantesController#create as */*
+  Parameters: {"name"=>"KFC1", "email"=>"kfc1@mail.com", "ristorante"=>{"name"=>"KFC1", "email"=>"kfc1@mail.com"}}
+HTTP Origin header (http://localhost:3001) didn't match request.base_url (http://127.0.0.1:3000)
+[31mUnpermitted parameter: :ristorante. Context: { controller: RistorantesController, action: create, request: #<ActionDispatch::Request:0x00007fc190ab0be0>, params: {"name"=>"KFC1", "email"=>"kfc1@mail.com", "controller"=>"ristorantes", "action"=>"create", "ristorante"=>{"name"=>"KFC1", "email"=>"kfc1@mail.com"}} }[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.2ms)
+Completed 422 Unprocessable Entity in 25ms (Views: 4.2ms | ActiveRecord: 1.0ms | Allocations: 11653)
+
+
+Started POST "/ristorantes" for 127.0.0.1 at 2023-03-31 17:21:50 +0300
+Processing by RistorantesController#create as */*
+  Parameters: {"name"=>"KFC1", "email"=>"kfc1@mail.com", "ristorante"=>{"name"=>"KFC1", "email"=>"kfc1@mail.com"}}
+HTTP Origin header (http://localhost:3001) didn't match request.base_url (http://127.0.0.1:3000)
+[31mUnpermitted parameter: :ristorante. Context: { controller: RistorantesController, action: create, request: #<ActionDispatch::Request:0x00007fc18a8805b0>, params: {"name"=>"KFC1", "email"=>"kfc1@mail.com", "controller"=>"ristorantes", "action"=>"create", "ristorante"=>{"name"=>"KFC1", "email"=>"kfc1@mail.com"}} }[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 422 Unprocessable Entity in 8ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 1319)
+
+
+Started POST "/ristorantes" for 127.0.0.1 at 2023-03-31 17:25:26 +0300
+Processing by RistorantesController#create as */*
+  Parameters: {"name"=>"KFC1", "email"=>"kfc1@mail.com", "ristorante"=>{"name"=>"KFC1", "email"=>"kfc1@mail.com"}}
+HTTP Origin header (http://localhost:3001) didn't match request.base_url (http://127.0.0.1:3000)
+[31mUnpermitted parameter: :ristorante. Context: { controller: RistorantesController, action: create, request: #<ActionDispatch::Request:0x00007fc18a871ce0>, params: {"name"=>"KFC1", "email"=>"kfc1@mail.com", "controller"=>"ristorantes", "action"=>"create", "ristorante"=>{"name"=>"KFC1", "email"=>"kfc1@mail.com"}} }[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 422 Unprocessable Entity in 6ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 1313)
+
+
+Started POST "/ristorantes" for 127.0.0.1 at 2023-03-31 17:26:43 +0300
+Processing by RistorantesController#create as */*
+  Parameters: {"name"=>"KFC", "email"=>"kfc1@mail.com", "location_id"=>0, "ristorante"=>{"name"=>"KFC", "email"=>"kfc1@mail.com", "location_id"=>0}}
+HTTP Origin header (http://localhost:3001) didn't match request.base_url (http://127.0.0.1:3000)
+[31mUnpermitted parameter: :ristorante. Context: { controller: RistorantesController, action: create, request: #<ActionDispatch::Request:0x00007fc18a863528>, params: {"name"=>"KFC", "email"=>"kfc1@mail.com", "location_id"=>0, "controller"=>"ristorantes", "action"=>"create", "ristorante"=>{"name"=>"KFC", "email"=>"kfc1@mail.com", "location_id"=>0}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 422 Unprocessable Entity in 42ms (Views: 0.8ms | ActiveRecord: 1.6ms | Allocations: 15259)
+
+
+Started POST "/ristorantes" for 127.0.0.1 at 2023-03-31 17:27:03 +0300
+Processing by RistorantesController#create as */*
+  Parameters: {"name"=>"KFC", "email"=>"kfc1@mail.com", "location_id"=>0, "ristorante"=>{"name"=>"KFC", "email"=>"kfc1@mail.com", "location_id"=>0}}
+HTTP Origin header (http://localhost:3001) didn't match request.base_url (http://127.0.0.1:3000)
+[31mUnpermitted parameter: :ristorante. Context: { controller: RistorantesController, action: create, request: #<ActionDispatch::Request:0x00007fc18a786600>, params: {"name"=>"KFC", "email"=>"kfc1@mail.com", "location_id"=>0, "controller"=>"ristorantes", "action"=>"create", "ristorante"=>{"name"=>"KFC", "email"=>"kfc1@mail.com", "location_id"=>0}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 422 Unprocessable Entity in 12ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 3433)
+
+
+Started POST "/ristorantes" for 127.0.0.1 at 2023-03-31 17:27:07 +0300
+Processing by RistorantesController#create as */*
+  Parameters: {"name"=>"KFC", "email"=>"kfc1@mail.com", "location_id"=>"2", "ristorante"=>{"name"=>"KFC", "email"=>"kfc1@mail.com", "location_id"=>"2"}}
+HTTP Origin header (http://localhost:3001) didn't match request.base_url (http://127.0.0.1:3000)
+[31mUnpermitted parameter: :ristorante. Context: { controller: RistorantesController, action: create, request: #<ActionDispatch::Request:0x00007fc18a731e20>, params: {"name"=>"KFC", "email"=>"kfc1@mail.com", "location_id"=>"2", "controller"=>"ristorantes", "action"=>"create", "ristorante"=>{"name"=>"KFC", "email"=>"kfc1@mail.com", "location_id"=>"2"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+  [1m[36mRistorante Create (2.2ms)[0m  [1m[32mINSERT INTO "ristorantes" ("name", "email", "location_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "KFC"], ["email", "kfc1@mail.com"], ["location_id", 2], ["created_at", "2023-03-31 14:27:07.960735"], ["updated_at", "2023-03-31 14:27:07.960735"]]
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+  [1m[36mTRANSACTION (142.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+[active_model_serializers]   [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."ristorante_id" = ?[0m  [["ristorante_id", 2]]
+[active_model_serializers]   ↳ app/controllers/ristorantes_controller.rb:27:in `create'
+[active_model_serializers] Rendered RistoranteSerializer with ActiveModelSerializers::Adapter::Attributes (18.59ms)
+Completed 201 Created in 190ms (Views: 27.3ms | ActiveRecord: 145.8ms | Allocations: 13900)
+
+
+Started POST "/ristorantes" for 127.0.0.1 at 2023-03-31 17:28:53 +0300
+Processing by RistorantesController#create as */*
+  Parameters: {"name"=>"KFC3", "email"=>"kfc3@mail.com", "location_id"=>"3", "ristorante"=>{"name"=>"KFC3", "email"=>"kfc3@mail.com", "location_id"=>"3"}}
+HTTP Origin header (http://localhost:3001) didn't match request.base_url (http://127.0.0.1:3000)
+[31mUnpermitted parameter: :ristorante. Context: { controller: RistorantesController, action: create, request: #<ActionDispatch::Request:0x00007fc18a61bea0>, params: {"name"=>"KFC3", "email"=>"kfc3@mail.com", "location_id"=>"3", "controller"=>"ristorantes", "action"=>"create", "ristorante"=>{"name"=>"KFC3", "email"=>"kfc3@mail.com", "location_id"=>"3"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+  [1m[36mRistorante Create (0.5ms)[0m  [1m[32mINSERT INTO "ristorantes" ("name", "email", "location_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "KFC3"], ["email", "kfc3@mail.com"], ["location_id", 3], ["created_at", "2023-03-31 14:28:53.863080"], ["updated_at", "2023-03-31 14:28:53.863080"]]
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+  [1m[36mTRANSACTION (177.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."ristorante_id" = ?[0m  [["ristorante_id", 3]]
+[active_model_serializers]   ↳ app/controllers/ristorantes_controller.rb:27:in `create'
+[active_model_serializers] Rendered RistoranteSerializer with ActiveModelSerializers::Adapter::Attributes (4.11ms)
+Completed 201 Created in 197ms (Views: 4.5ms | ActiveRecord: 178.9ms | Allocations: 4638)
+
+
+  [1m[35m (259.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (127.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateLocations (20230327182854)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "locations" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "county" varchar, "street" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230327182854"]]
+  [1m[36mTRANSACTION (120.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateUsers (20230327232930)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "password_digest" varchar, "email" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230327232930"]]
+  [1m[36mTRANSACTION (122.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateReviews (20230328065726)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "comment" varchar, "rating" integer, "user_id" integer NOT NULL, "ristorante_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_74a66bd6c5"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_2304d245f4"
+FOREIGN KEY ("ristorante_id")
+  REFERENCES "ristorantes" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_reviews_on_user_id" ON "reviews" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_reviews_on_ristorante_id" ON "reviews" ("ristorante_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230328065726"]]
+  [1m[36mTRANSACTION (114.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateRistorantes (20230328085315)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "ristorantes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "location_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_56b3151598"
+FOREIGN KEY ("location_id")
+  REFERENCES "locations" ("id")
+)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "index_ristorantes_on_location_id" ON "ristorantes" ("location_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230328085315"]]
+  [1m[36mTRANSACTION (111.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-03-31 14:32:20.894999"], ["updated_at", "2023-03-31 14:32:20.894999"]]
+  [1m[36mTRANSACTION (86.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLocation Create (0.3ms)[0m  [1m[32mINSERT INTO "locations" ("county", "street", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["county", "Nairobi"], ["street", "Moi Avenue"], ["created_at", "2023-03-31 14:32:21.045526"], ["updated_at", "2023-03-31 14:32:21.045526"]]
+  [1m[36mTRANSACTION (93.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLocation Create (0.3ms)[0m  [1m[32mINSERT INTO "locations" ("county", "street", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["county", "Nakuru"], ["street", "Kenyatta Avenue"], ["created_at", "2023-03-31 14:32:21.143494"], ["updated_at", "2023-03-31 14:32:21.143494"]]
+  [1m[36mTRANSACTION (117.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLocation Create (0.3ms)[0m  [1m[32mINSERT INTO "locations" ("county", "street", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["county", "Mombasa"], ["street", "Tom Mboya"], ["created_at", "2023-03-31 14:32:21.265595"], ["updated_at", "2023-03-31 14:32:21.265595"]]
+  [1m[36mTRANSACTION (95.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mRistorante Load (0.1ms)[0m  [1m[34mSELECT "ristorantes".* FROM "ristorantes" WHERE "ristorantes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mRistorante Load (0.1ms)[0m  [1m[34mSELECT "ristorantes".* FROM "ristorantes" WHERE "ristorantes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+Started POST "/ristorantes" for 127.0.0.1 at 2023-03-31 17:33:01 +0300
+Processing by RistorantesController#create as */*
+  Parameters: {"name"=>"KFC ", "email"=>"kfc1@mail.com", "location_id"=>"1", "ristorante"=>{"name"=>"KFC ", "email"=>"kfc1@mail.com", "location_id"=>"1"}}
+HTTP Origin header (http://localhost:3001) didn't match request.base_url (http://127.0.0.1:3000)
+[31mUnpermitted parameter: :ristorante. Context: { controller: RistorantesController, action: create, request: #<ActionDispatch::Request:0x00007fc1909a5980>, params: {"name"=>"KFC ", "email"=>"kfc1@mail.com", "location_id"=>"1", "controller"=>"ristorantes", "action"=>"create", "ristorante"=>{"name"=>"KFC ", "email"=>"kfc1@mail.com", "location_id"=>"1"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+  [1m[36mRistorante Create (0.4ms)[0m  [1m[32mINSERT INTO "ristorantes" ("name", "email", "location_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "KFC "], ["email", "kfc1@mail.com"], ["location_id", 1], ["created_at", "2023-03-31 14:33:01.650190"], ["updated_at", "2023-03-31 14:33:01.650190"]]
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+  [1m[36mTRANSACTION (108.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+[active_model_serializers]   [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."ristorante_id" = ?[0m  [["ristorante_id", 1]]
+[active_model_serializers]   ↳ app/controllers/ristorantes_controller.rb:27:in `create'
+[active_model_serializers] Rendered RistoranteSerializer with ActiveModelSerializers::Adapter::Attributes (8.85ms)
+Completed 201 Created in 142ms (Views: 10.5ms | ActiveRecord: 111.8ms | Allocations: 13651)
+
+
+Started POST "/ristorantes" for 127.0.0.1 at 2023-03-31 17:33:26 +0300
+Processing by RistorantesController#create as */*
+  Parameters: {"name"=>"kfc2", "email"=>"kfc2@gmail.com", "location_id"=>"2", "ristorante"=>{"name"=>"kfc2", "email"=>"kfc2@gmail.com", "location_id"=>"2"}}
+HTTP Origin header (http://localhost:3001) didn't match request.base_url (http://127.0.0.1:3000)
+[31mUnpermitted parameter: :ristorante. Context: { controller: RistorantesController, action: create, request: #<ActionDispatch::Request:0x00007fc18a586058>, params: {"name"=>"kfc2", "email"=>"kfc2@gmail.com", "location_id"=>"2", "controller"=>"ristorantes", "action"=>"create", "ristorante"=>{"name"=>"kfc2", "email"=>"kfc2@gmail.com", "location_id"=>"2"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+  [1m[36mLocation Load (0.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+  [1m[36mRistorante Create (0.3ms)[0m  [1m[32mINSERT INTO "ristorantes" ("name", "email", "location_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "kfc2"], ["email", "kfc2@gmail.com"], ["location_id", 2], ["created_at", "2023-03-31 14:33:26.384927"], ["updated_at", "2023-03-31 14:33:26.384927"]]
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+  [1m[36mTRANSACTION (81.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+[active_model_serializers]   [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."ristorante_id" = ?[0m  [["ristorante_id", 2]]
+[active_model_serializers]   ↳ app/controllers/ristorantes_controller.rb:27:in `create'
+[active_model_serializers] Rendered RistoranteSerializer with ActiveModelSerializers::Adapter::Attributes (3.75ms)
+Completed 201 Created in 97ms (Views: 4.0ms | ActiveRecord: 82.6ms | Allocations: 4640)
+
+
+Started POST "/ristorantes" for 127.0.0.1 at 2023-03-31 17:33:45 +0300
+Processing by RistorantesController#create as */*
+  Parameters: {"name"=>"kfc3", "email"=>"kfc3@mail.com", "location_id"=>"3", "ristorante"=>{"name"=>"kfc3", "email"=>"kfc3@mail.com", "location_id"=>"3"}}
+HTTP Origin header (http://localhost:3001) didn't match request.base_url (http://127.0.0.1:3000)
+[31mUnpermitted parameter: :ristorante. Context: { controller: RistorantesController, action: create, request: #<ActionDispatch::Request:0x00007fc18a615140>, params: {"name"=>"kfc3", "email"=>"kfc3@mail.com", "location_id"=>"3", "controller"=>"ristorantes", "action"=>"create", "ristorante"=>{"name"=>"kfc3", "email"=>"kfc3@mail.com", "location_id"=>"3"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+  [1m[36mRistorante Create (0.4ms)[0m  [1m[32mINSERT INTO "ristorantes" ("name", "email", "location_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "kfc3"], ["email", "kfc3@mail.com"], ["location_id", 3], ["created_at", "2023-03-31 14:33:45.248290"], ["updated_at", "2023-03-31 14:33:45.248290"]]
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+  [1m[36mTRANSACTION (91.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/ristorantes_controller.rb:25:in `create'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."ristorante_id" = ?[0m  [["ristorante_id", 3]]
+[active_model_serializers]   ↳ app/controllers/ristorantes_controller.rb:27:in `create'
+[active_model_serializers] Rendered RistoranteSerializer with ActiveModelSerializers::Adapter::Attributes (3.31ms)
+Completed 201 Created in 108ms (Views: 3.9ms | ActiveRecord: 92.3ms | Allocations: 4629)
+
+
+Started GET "/ristorantes" for 127.0.0.1 at 2023-03-31 17:34:26 +0300
+Processing by RistorantesController#index as */*
+  Parameters: {"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>2, "ristorante"=>{"name"=>"KFC", "email"=>"chickenKFC@gmail.com", "location_id"=>2}}
+  [1m[36mRistorante Load (0.3ms)[0m  [1m[34mSELECT "ristorantes".* FROM "ristorantes"[0m
+  ↳ app/controllers/ristorantes_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."ristorante_id" = ?[0m  [["ristorante_id", 1]]
+[active_model_serializers]   ↳ app/controllers/ristorantes_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/ristorantes_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."ristorante_id" = ?[0m  [["ristorante_id", 2]]
+[active_model_serializers]   ↳ app/controllers/ristorantes_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/ristorantes_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."ristorante_id" = ?[0m  [["ristorante_id", 3]]
+[active_model_serializers]   ↳ app/controllers/ristorantes_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/ristorantes_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (27.33ms)
+Completed 200 OK in 31ms (Views: 29.6ms | ActiveRecord: 1.3ms | Allocations: 8312)
+
+
